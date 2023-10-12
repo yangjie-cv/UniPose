@@ -6,7 +6,21 @@
         content="UniPose: Detection Any Keypoints">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UniPose: Detection Any Keypoints</title>
+  <style>
+    /* 段落文字的样式 */
+    .paragraph {
+      font-size: 1.5em; /* 设置较大的字体大小 */
+      margin-top: 0.5em; /* 可以根据需要调整段落间的间距 */
+      text-align: left; /* 左对齐文本 */
+    }
 
+    /* 前导点的样式 */
+    .dot {
+      margin-right: 0.5em; /* 调整前导点与文字之间的距离 */
+      font-size: inherit; /* 继承文字的字体大小 */
+      line-height: inherit; /* 继承文字的行高 */
+    }
+  </style>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5ZVQZ7NHC"></script> -->
@@ -155,9 +169,31 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview: A Generalist Keypoint Detector</h2>
+
+        <!-- 第一句话，已加粗 -->
+        <p class="paragraph"><span class="dot">&#8226;</span> <span style="font-weight: bold;">UniPose is the first end-to-end prompt-based keypoint detection framework.</span></p>
+
+        <!-- 第二句话，已加粗 -->
+        <p class="paragraph"><span class="dot">&#8226;</span> <span style="font-weight: bold;">UniPose could support visual or textual prompts for any articulated, rigid, and soft objects.</span></p>
+
+        <!-- 第三句话，已加粗 -->
+        <p class="paragraph"><span class="dot">&#8226;</span> <span style="font-weight: bold;">UniPose has strong fine-grained localization and generalization abilities across image styles, categories, and poses.</span></p>
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <section class="hero teaser">
   <div class="section-title has-text-centered" >
-    <h2 class="title is-3 is-centered">Supported Task 1: Visual Prompt-based Keypoint Detection</h2>
+    <h2 class="title is-3 is-centered">Visual Prompt as Input</h2>
   </div>
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -165,7 +201,7 @@
     </div>
   </div>
   <div class="section-title has-text-centered" >
-    <h2 class="title is-3 is-centered">Supported Task 2: Textual Prompt-based Keypoint Detection</h2>
+    <h2 class="title is-3 is-centered">Textual Prompt as Input</h2>
   </div>
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -274,25 +310,29 @@
 
 
 <!--=================Overview of UniPose==========================-->
-<section class="section" >
+<section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Overview of UniPose: <br> An end-to-end multi-modality prompt-based keypoint detection framework </h2>
+        <h2 class="title is-3">Framework of UniPose </h2>
         <!-- <h2 class="subtitle has-text-centered">We use eight metrics covering four aspects: structure distance, background preservation, edit prompt-image consistency, and inference time.</h2> -->
         <div class="content has-text-justified">
           <div style="text-align: center; vertical-align:middle">
             <img src="unipose/figures/framework.png" width="1024">
           </div>
 
-          <p>
+          <!-- 修改后的文本，字体大小增大 -->
+          <p style="font-size: 1.5em;">
             <span style="font-weight: bold; font-style: italic">Highlight: UniPose can effectively
            align text-to-keypoint and image-to-keypoint due to the mutual enhancement of
-           textual and visual prompts based on the cross-modality contrastive learning optimization objectives.
+           textual and visual prompts based on the cross-modality contrastive learning optimization objectives.</span>
           </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
 
 
 
@@ -324,96 +364,32 @@
         <!-- <h2 class="subtitle has-text-centered">We use eight metrics covering four aspects: structure distance, background preservation, edit prompt-image consistency, and inference time.</h2> -->
         <div class="content has-text-justified">
           <div style="text-align: center; vertical-align:middle">
-            <img src="unipose/figures/performance.png" width="800">
+            <img src="unipose/figures/performance.png" width="600">
           </div>
           <p>
-            <span style="font-weight: bold; font-style: italic">Highlight: UniPose has strong finegrained localization and generalization abilities across image styles, categories,
-            and poses. 
+            <p style="font-size: 1.5em;">
+            <span style="font-weight: bold; font-style: italic">
+                    <!-- 第一句话，已加粗 -->
+        <p class="paragraph"><span class="dot">&#8226;</span> <span style="font-weight: bold;">  We show the remarkable generalization capabilities of UniPose for unseen object and keypoint detection, which exhibits a notable 42.8% improvement in PCK
+          performance when compared to the state-of-the-art CAPE method. .</span></p>
+
+        <!-- 第二句话，已加粗 -->
+        <p class="paragraph"><span class="dot">&#8226;</span> <span style="font-weight: bold;">UniPose outperforms
+          the state-of-the-art end-to-end model (e.g., ED-Pose) across 12 diverse datasets. Its performance
+          is also comparable with state-of-the-art expert models for object detection (e.g., GroundingDINO)
+          and keypoint detection (e.g., ViTPose++).</span></p>
+
+        <!-- 第三句话，已加粗 -->
+        <p class="paragraph"><span class="dot">&#8226;</span> <span style="font-weight: bold;">UniPose exhibits impressive text-to-image
+          similarity at both instance and keypoint levels, notably surpassing CLIP by 204% when distinguishing between different animal categories and by 166% when discerning various image styles. </span></p>
+      
+
            </p>
     </div>
   </div>
 </section>
 
 
-<section class="section" >
-  <div class="container">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">A. Compared with category-agnostic pose estimators for unseen keypoint detection         </h2>
-        <!-- <h2 class="subtitle has-text-centered">We use eight metrics covering four aspects: structure distance, background preservation, edit prompt-image consistency, and inference time.</h2> -->
-        <div class="content has-text-justified">
-          <div style="text-align: center; vertical-align:middle">
-            <img src="unipose/figures/A.png" width="2000">
-          </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="section" >
-  <div class="container">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">B. Compared with SOTA expert keypoint detection models      </h2>
-        <!-- <h2 class="subtitle has-text-centered">We use eight metrics covering four aspects: structure distance, background preservation, edit prompt-image consistency, and inference time.</h2> -->
-        <div class="content has-text-justified">
-          <div style="text-align: center; vertical-align:middle">
-            <img src="unipose/figures/B.png" width="2000">
-            
-          </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section" >
-  <div class="container">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">C. Compared with SOTA open-vocabulary detection model        </h2>
-        <!-- <h2 class="subtitle has-text-centered">We use eight metrics covering four aspects: structure distance, background preservation, edit prompt-image consistency, and inference time.</h2> -->
-        <div class="content has-text-justified">
-          <div style="text-align: center; vertical-align:middle">
-            <img src="unipose/figures/C.png" width="2000">
-          </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section" >
-  <div class="container">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">D. Compared with generalist models for keypoint detection
-        </h2>
-        <!-- <h2 class="subtitle has-text-centered">We use eight metrics covering four aspects: structure distance, background preservation, edit prompt-image consistency, and inference time.</h2> -->
-        <div class="content has-text-justified">
-          <div style="text-align: center; vertical-align:middle">
-            <img src="unipose/figures/D.png" width="800">
-          </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="section" >
-  <div class="container">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">E. Compared with vision-language model-CLIP
-
-        </h2>
-        <!-- <h2 class="subtitle has-text-centered">We use eight metrics covering four aspects: structure distance, background preservation, edit prompt-image consistency, and inference time.</h2> -->
-        <div class="content has-text-justified">
-          <div style="text-align: center; vertical-align:middle">
-            <img src="unipose/figures/E.png" width="800">
-          </div>
-    </div>
-  </div>
-</section>
 
 
   
