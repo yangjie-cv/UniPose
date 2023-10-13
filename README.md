@@ -1,3 +1,3 @@
-# Direct Inversion
+# UniPose
 
-This is the project page of Direct Inversion.
+This is the project page of UniPose.
