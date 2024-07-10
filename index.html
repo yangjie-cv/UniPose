@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="UniPose: Detecting Any Keypoints">
+        content="X-Pose: Detecting Any Keypoints">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UniPose: Detecting Any Keypoints</title>
+  <title>X-Pose: Detecting Any Keypoints</title>
   <style>
     /* 段落文字的样式 */
     .paragraph {
@@ -79,7 +79,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"><span style="font-weight: bold; font-style: italic">UniPose : Detecting Any Keypoints</h1>
+          <h1 class="title is-1 publication-title"><span style="font-weight: bold; font-style: italic">X-Pose : Detecting Any Keypoints</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://yangjie-cv.github.io/">Jie Yang</a><sup>1,2</sup>,</span>
@@ -132,7 +132,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/IDEA-Research/UniPose"
+                <a href="https://github.com/IDEA-Research/X-Pose"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -172,7 +172,7 @@
 
 
 
-<!--=================Overview of UniPose==========================-->
+<!--=================Overview of X-Pose==========================-->
 <section class="section" >
   <div class="container">
     <div class="columns is-centered has-text-centered">
@@ -186,13 +186,13 @@
 
           <!-- 第一句话，已加粗并且字体更大 -->
           <p style="font-size: 1.2em; font-weight: bold; font-style: italic">
-            <span class="dot">&#8226;</span> We show the remarkable generalization capabilities of UniPose for unseen object and keypoint detection, which exhibits a notable 42.8% improvement in PCK
+            <span class="dot">&#8226;</span> We show the remarkable generalization capabilities of X-Pose for unseen object and keypoint detection, which exhibits a notable 42.8% improvement in PCK
             performance when compared to the state-of-the-art CAPE method.
           </p>
 
           <!-- 第二句话，已加粗并且字体更大 -->
           <p style="font-size: 1.2em; font-weight: bold;">
-            <span class="dot">&#8226;</span> UniPose outperforms
+            <span class="dot">&#8226;</span> X-Pose outperforms
             the state-of-the-art end-to-end model (e.g., ED-Pose) across 12 diverse datasets. Its performance
             is also comparable with state-of-the-art expert models for object detection (e.g., GroundingDINO)
             and keypoint detection (e.g., ViTPose++).
@@ -200,7 +200,7 @@
 
           <!-- 第三句话，已加粗并且字体更大 -->
           <p style="font-size: 1.2em; font-weight: bold;">
-            <span class="dot">&#8226;</span> UniPose exhibits impressive text-to-image
+            <span class="dot">&#8226;</span> X-Pose exhibits impressive text-to-image
             similarity at both instance and keypoint levels, notably surpassing CLIP by 204% when distinguishing between different animal categories and by 166% when discerning various image styles.
           </p>
         </div>
@@ -218,13 +218,13 @@
         <h2 class="title is-3">Overview: A Generalist Keypoint Detector</h2>
 
         <!-- 第一句话，已加粗 -->
-        <p class="paragraph"><span class="dot">&#8226;</span> <span style="font-weight: bold;">UniPose is the first end-to-end prompt-based keypoint detection framework.</span></p>
+        <p class="paragraph"><span class="dot">&#8226;</span> <span style="font-weight: bold;">X-Pose is the first end-to-end prompt-based keypoint detection framework.</span></p>
 
         <!-- 第二句话，已加粗 -->
-        <p class="paragraph"><span class="dot">&#8226;</span> <span style="font-weight: bold;">UniPose could support visual or textual prompts for any articulated, rigid, and soft objects.</span></p>
+        <p class="paragraph"><span class="dot">&#8226;</span> <span style="font-weight: bold;">X-Pose could support visual or textual prompts for any articulated, rigid, and soft objects.</span></p>
 
         <!-- 第三句话，已加粗 -->
-        <p class="paragraph"><span class="dot">&#8226;</span> <span style="font-weight: bold;">UniPose has strong fine-grained localization and generalization abilities across image styles, categories, and poses.</span></p>
+        <p class="paragraph"><span class="dot">&#8226;</span> <span style="font-weight: bold;">X-Pose has strong fine-grained localization and generalization abilities across image styles, categories, and poses.</span></p>
       
       </div>
     </div>
@@ -310,21 +310,20 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            This work proposes a unified framework called UniPose to detect keypoints of
-            any articulated (e.g., human and animal), rigid, and soft objects via visual or textual prompts for fine-grained vision understanding and manipulation. Keypoint
-            is a structure-aware, pixel-level, and compact representation of any object, especially articulated objects. Existing fine-grained promptable tasks mainly focus on
-            object instance detection and segmentation but often fail to identify fine-grained
-            granularity and structured information of image and instance, such as eyes, leg,
-            paw, etc. Meanwhile, prompt-based keypoint detection is still under-explored. To
-            bridge the gap, we make the first attempt to develop an end-to-end prompt-based
-            keypoint detection framework called UniPose to detect keypoints of any objects.
-            As keypoint detection tasks are unified in this framework, we can leverage 13
-            keypoint detection datasets with 338 keypoints across 1,237 categories over 400K
-            instances to train a generic keypoint detection model. UniPose can effectively
-            align text-to-keypoint and image-to-keypoint due to the mutual enhancement of
-            textual and visual prompts based on the cross-modality contrastive learning optimization objectives. Our experimental results show that UniPose has strong fine-grained localization and generalization abilities across image styles, categories,
-            and poses. Based on UniPose as a generalist keypoint detector, we hope it could
-            serve fine-grained visual perception, understanding, and generation.
+This work aims to address an advanced keypoint detection problem: how to accurately detect any keypoints in complex real-world scenarios, which involves massive, messy, and open-ended objects as
+well as their associated keypoints definitions. Current high-performance
+keypoint detectors often fail to tackle this problem due to their twostage schemes, under-explored prompt designs, and limited training data.
+To bridge the gap, we propose X-Pose, a novel end-to-end framework
+with multi-modal (i.e., visual, textual, or their combinations) prompts
+to detect multi-object keypoints for any articulated (e.g., human and
+animal), rigid, and soft objects within a given image. Moreover, we
+introduce a large-scale dataset called UniKPT, which unifies 13 keypoint detection datasets with 338 keypoints across 1, 237 categories over
+400K instances. Training with UniKPT, X-Pose effectively aligns textto-keypoint and image-to-keypoint due to the mutual enhancement of
+multi-modal prompts based on cross-modality contrastive learning. Our
+experimental results demonstrate that X-Pose achieves notable improvements of 27.7 AP, 6.44 PCK, and 7.0 AP compared to state-of-the-art
+non-promptable, visual prompt-based, and textual prompt-based methods in each respective fair setting. More importantly, the in-the-wild
+test demonstrates X-Pose’s strong fine-grained keypoint localization and
+generalization abilities across image styles, object categories, and poses, paving a new path to multi-object keypoint detection in real applications. Our code and dataset are available at https://github.com/IDEAResearch/X-Pose.
           </p>
           </div>
       </div>
